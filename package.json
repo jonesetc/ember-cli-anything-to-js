@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-anything-to-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ember CLI preprocessor add-on to embed any type of file into a valid JS module, exporting the original file's contents as a string.",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/jonesetc/ember-cli-anything-to-js",
   "dependencies": {
     "broccoli": "^0.15.0",
-    "broccoli-anything-to-js": "^0.0.1",
+    "broccoli-anything-to-js": "latest",
     "lodash.defaults": "^3.0.0"
   }
 }
