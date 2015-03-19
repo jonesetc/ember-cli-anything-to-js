@@ -1,0 +1,29 @@
+{
+  "name": "ember-cli-anything-to-js",
+  "version": "0.0.1",
+  "description": "Ember CLI preprocessor add-on to embed any type of file into a valid JS module, exporting the original file's contents as a string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonesetc/ember-cli-anything-to-js.git"
+  },
+  "keywords": [
+    "ember-addon",
+    "text-to-js",
+    "import-text"
+  ],
+  "author": "Kyle Jones <kyle@jonesetc.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonesetc/ember-cli-anything-to-js/issues"
+  },
+  "homepage": "https://github.com/jonesetc/ember-cli-anything-to-js",
+  "dependencies": {
+    "broccoli": "^0.15.0",
+    "broccoli-anything-to-js": "0.0.1",
+    "lodash.defaults": "^3.0.0"
+  }
+}
