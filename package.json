@@ -24,6 +24,7 @@
   "dependencies": {
     "broccoli": "^0.15.0",
     "broccoli-anything-to-js": "latest",
+    "ember-cli-version-checker": "^1.0.2",
     "lodash.defaults": "^3.0.0"
   }
 }

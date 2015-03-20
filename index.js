@@ -1,4 +1,5 @@
 var defaults  = require('lodash.defaults');
+var checker = require('ember-cli-version-checker');
 var ToJSFilter = require('broccoli-anything-to-js');
 
 /**
@@ -33,6 +34,16 @@ module.exports = {
     name: "Ember CLI Anything-To-JS Addon",
 
     /**
+     * Function for checking if we need to manually run setupPreprocessorRegistry.
+     *
+     * @function
+     * @return {boolean} Whether we need to manually run setupPreprocessorRegistry
+     */
+    shouldSetupRegistryInIncluded: function () {
+        return !checker.isAbove(this, '0.2.0');
+    },
+
+    /**
      * Access the configuration for this plugin from the Ember CLI environment.
      *
      * @function
@@ -57,12 +68,14 @@ module.exports = {
     },
 
     /**
-     * Ember CLI add-on hook. All this does is call setupPreprocessorRegistry.
+     * Ember CLI add-on hook. All this does is call setupPreprocessorRegistry if needed.
      *
      * @function
      * @param {Ember.app} app
      */
     included: function (app) {
-        this.setupPreprocessorRegistry('parent', app.registry);
+        if (this.shouldSetupRegistryInIncluded()) {
+            this.setupPreprocessorRegistry('parent', app.registry);
+        }
     }
 };
